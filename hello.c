@@ -4,6 +4,7 @@
 /* INTENTIONAL VULNERABILITY for code-scanner testing.
  * CWE-120 / CWE-121: classic stack buffer overflow via unbounded strcpy.
  * Do not use this pattern in real software.
+ * Here is an update
  */
 void greet(char *name) {
     char buffer[16];
