@@ -1,21 +1,31 @@
 # hello-world
 
-Simple Hello World examples, plus an **intentional** C buffer overflow for code-scanner testing.
+Simple Hello World examples with **intentional** vulnerabilities for code-scanner testing.
 
-## Python
+## Python (CWE-79 XSS)
 
 ```bash
 python hello.py
 ```
 
-## C (intentionally vulnerable)
+`hello.py` reflects the `name` query parameter into HTML with no escaping.
 
-`hello.c` copies attacker-controlled input into a 16-byte stack buffer with `strcpy` (CWE-120 / CWE-121).
+## C (CWE-120 / CWE-121 buffer overflow)
 
 ```bash
 gcc -o hello hello.c
 ./hello
-./hello AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ```
 
-This vulnerability is present on purpose so you can verify that a scanner detects it. Do not reuse this pattern.
+`hello.c` copies attacker-controlled input into a 16-byte stack buffer with `strcpy`.
+
+## Java (CWE-78 command injection, CWE-89 SQL injection)
+
+```bash
+javac Hello.java
+java Hello World
+```
+
+`Hello.java` passes unsanitized arguments to `Runtime.exec()` and concatenates them into a SQL string.
+
+These vulnerabilities are present on purpose so you can verify that a scanner detects them. Do not reuse these patterns.
