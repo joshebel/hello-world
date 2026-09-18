@@ -5,7 +5,7 @@ public class Hello {
      * CWE-78: OS command injection via Runtime.exec()
      * CWE-89: SQL injection via string-concatenated query
      *
-     * Do not use these patterns in real software.
+     * Do not use these patterns in real software.//...
      */
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
