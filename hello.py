@@ -3,7 +3,7 @@
 
 CWE-79: user-controlled query parameter is written into HTML with no escaping.
 Do not use this pattern in real software.
-Repo update to trigger scanning again
+Repo update to trigger scanning again again
 """
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
