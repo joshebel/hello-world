@@ -28,4 +28,4 @@ java Hello World
 
 `Hello.java` passes unsanitized arguments to `Runtime.exec()` and concatenates them into a SQL string.
 
-These vulnerabilities are present on purpose so you can verify that a scanner detects them. Do not reuse these patterns.
+These vulnerabilities are present on purpose so you can verify that a scanner detects them. Do not reuse these patterns!
