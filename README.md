@@ -8,7 +8,7 @@ Simple Hello World examples with **intentional** vulnerabilities for code-scanne
 python hello.py
 ```
 
-`hello.py` reflects the `name` query parameter into HTML with no escaping.
+`hello.py` reflects the `name` query parameter into HTML with no escaping.....
 
 ## C (CWE-120 / CWE-121 buffer overflow)
 
